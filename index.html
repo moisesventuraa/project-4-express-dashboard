@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Dashboard</title>
+        <!-- link page styles -->
+        <link rel="stylesheet" href="./styles.css?v=2" />
+        <!-- load js after html -->
+        <script src="./script.js?v=2" defer></script>
+
+    </head>
+    <body>
+        <div id="pageLayout">
+            <div id="mainContent">
+
+            <!-- profile display section -->
+            <section id="profile">
+                <h2 id="profileName">Moises Ventura Lopez</h2>
+                <p id="profileEmail">venturalopmo@vcu.edu</p>
+                <p id="profileColor"></p>
+            </section>
+
+            <br>
+
+            <!-- form inputs section -->
+            <section id="form-section">
+                <form id="profileForm">
+    <!-- name input -->
+    <label>
+        Name:
+        <input id="nameinput" type="text">
+        <small id="nameError"></small>
+    </label>
+
+    <br><br>
+
+    <!-- email input -->
+    <label>
+        Email:
+        <input id="emailinput" type="email">
+        <small id="emailError"></small>
+    </label>
+
+    <br><br>
+
+    <!-- favorite color input -->
+    <label>
+        Favorite Color:
+        <input id="fcolorinput" type="color">
+    </label>
+
+    <br><br>
+
+    <small id="formError"></small>
+
+    <br><br>
+
+    <!-- submit button -->
+    <button type="submit">Update Profile</button>
+</form>
+            </section>
+            </div>
+
+            <section id="taskSection">
+                <h2>Task List</h2>
+
+                <form id="taskForm">
+                    <label for="taskTitle">Task Title:</label>
+                    <input type="text" id="taskTitle">
+
+                    <label for="taskCategory">Category:</label>
+                    <input type="text" id="taskCategory">
+
+                    <button type="submit">Add Task</button>
+                </form>
+
+                <div class="buttonGroup">
+                    <button id="sortTasksButton" type="button">Sort A-Z</button>
+                    <button id="clearTasksButton" type="button">Clear List</button>
+                    <button id="saveJsonButton" type="button">Save JSON</button>
+                    <button id="loadJsonButton" type="button">Load JSON</button>
+                </div>
+
+                <ul id="taskList"></ul>
+            </section>
+
+            <!---- API section ---->
+            <section id="apiSection">
+                <h2>Fetched Items</h2>
+
+                <div class="buttonGroup">
+                    <button id="loadUsersButton" type="button">Load Items</button>
+                    <button id="clearUsersButton" type="button">Clear Items</button>
+                </div>
+
+                <p id="apiMessage"></p>
+
+                <div id="userContainer"></div>
+            </section>
+        </div>
+    </body>
+    
+</html>
